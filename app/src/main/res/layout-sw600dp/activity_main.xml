@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.MainActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        style="@style/drawerLayout"
+        tools:openDrawer="start">
+
+        <LinearLayout
+            android:id="@+id/home_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/mainToolbar"
+                style="@style/toolbar"
+                android:layout_height="70dp">
+
+                <TextView
+                    android:id="@+id/tvTitleToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="?android:attr/actionBarSize"
+                    android:text="@string/title_toolbar"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            style="@style/navigationView"
+            android:layout_width="500dp"
+            app:itemIconSize="25dp"
+            app:itemIconTint="@color/darkBlue"
+            app:itemTextAppearance="@style/NavigationViewStyle"
+            app:menu="@menu/nav_drawer" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</layout>

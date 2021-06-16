@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUserNameRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                style="@style/subtitle_blue"
+                android:background="@drawable/layout_corner_rounded_top_stroke"
+                android:paddingTop="10dp"
+                tools:text="LauraM" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_corner_rounded_stroke"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/text_small"
+                    android:layout_marginTop="10dp"
+                    tools:text="Admin" />
+
+                <TextView
+                    style="@style/text_small"
+                    android:layout_marginTop="10dp"
+                    tools:text="lauram@business.net" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/icon_Blue"
+                        android:src="@drawable/ic_edit"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        style="@style/icon_Blue"
+                        android:src="@drawable/ic_delete"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

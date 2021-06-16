@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.listProducts.ListProductsActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        style="@style/drawerLayout"
+        tools:openDrawer="start">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/listProductsToolbar"
+                style="@style/toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tvTitleToolbar"
+                        style="@style/text_small"
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="?android:attr/actionBarSize"
+                        android:text="@string/title_toolbar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/ivFilter"
+                        android:layout_width="25dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_slider"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.8"
+                        app:layout_constraintStart_toEndOf="@id/tvTitleToolbar"
+                        app:layout_constraintTop_toTopOf="@id/tvTitleToolbar"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <LinearLayout
+                android:id="@+id/home_content"
+                style="@style/layout_lists"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/listProductsToolbar">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tlListProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    app:tabIndicatorColor="@color/black"
+                    app:tabSelectedTextColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btnNewProduct"
+                    style="@style/button_dark_blue"
+                    android:layout_gravity="center"
+                    android:text="@string/text_btnNewProduct" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vpListProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            style="@style/navigationView"
+            app:itemIconTint="@color/darkBlue"
+            app:menu="@menu/nav_drawer" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

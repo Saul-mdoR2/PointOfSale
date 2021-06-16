@@ -1,0 +1,141 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+androidExtensions {
+    experimental = true
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    buildFeatures {
+        dataBinding = true
+    }
+
+    defaultConfig {
+        applicationId "com.example.pointofsale"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    applicationVariants.all { variant ->
+        variant.resValue "string", "app_version_name", "${defaultConfig.versionName}"
+        variant.resValue "string", "app_version", "${variant.versionName} - ${variant.versionCode}"
+    }
+
+
+    buildTypes {
+        debug{
+            minifyEnabled false
+            versionNameSuffix "-${gitBranch()}"
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "pointOfSale.stage"
+    productFlavors {
+        dev {
+            dimension "pointOfSale.stage"
+            resValue "string", "app_name", "Point of Sale - Dev"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "dev"
+            getProps("$projectDir.absolutePath/config/dev.properties").each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        staging {
+            dimension "pointOfSale.stage"
+            resValue "string", "app_name", "Point of Sale - Staging"
+            applicationIdSuffix ".staging"
+            versionNameSuffix "staging"
+            getProps("$projectDir.absolutePath/config/staging.properties").each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        production {
+            dimension "pointOfSale.stage"
+            resValue "string", "app_name", "Point of Sale"
+            applicationIdSuffix ""
+            versionNameSuffix ""
+            getProps("$projectDir.absolutePath/config/production.properties").each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //region Timber
+    implementation "com.jakewharton.timber:timber:$timber"
+    //endregion
+
+    //region Retrofit
+    implementation "com.squareup.okhttp3:okhttp:$okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$retrofitCoroutines"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofitMoshi"
+    //endregion
+
+    //region Koin
+    implementation "org.koin:koin-core:$koin"
+    implementation "org.koin:koin-core-ext:$koin"
+    implementation "org.koin:koin-androidx-scope:$koin"
+    implementation "org.koin:koin-androidx-viewmodel:$koin"
+    //endregion
+
+    //region Glide
+    implementation "com.github.bumptech.glide:glide:$glide"
+    kapt "com.github.bumptech.glide:compiler:$glide"
+    //endregion
+
+    // font awesome
+   // implementation 'com.github.AnwarSamir:FontAwesome:1.0.1'
+}
+
+static def gitBranch() {
+    def branch = ""
+    def proc = "git symbolic-ref -q --short HEAD".execute()
+    proc.in.eachLine { line -> branch = line }
+    proc.err.eachLine { line -> println line }
+    proc.waitFor()
+    if (branch == "") {
+        branch = System.getenv('GIT_BRANCH')
+    }
+    if (branch == null) {
+        branch = ""
+    }
+    def branchName = branch.replace("/", "_")
+    branchName.replace("origin_", "")
+}

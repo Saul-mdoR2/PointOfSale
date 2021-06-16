@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/layout_dialogs"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTitleAddCategory"
+            style="@style/header2_white"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/tite_add_category"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etNameNewCategory"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/et_corner_round"
+            android:ems="10"
+            android:hint="@string/hint_etCategory"
+            android:importantForAutofill="no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleAddCategory" />
+
+        <Button
+            android:id="@+id/btnConfirmAddCategory"
+            style="@style/button_white"
+            android:layout_marginTop="30dp"
+            android:text="@string/txt_button_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etNameNewCategory" />
+
+        <Button
+            android:id="@+id/btnCancelAddCategory"
+            style="@style/button_blue"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            android:text="@string/txtBtnCancelLogout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnConfirmAddCategory" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.resetPassword.ResetPasswordActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/newUserToolbar"
+            style="@style/toolbar"
+            android:layout_height="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_arrow_back_blue_tablet">
+
+            <TextView
+                android:id="@+id/tvTitleToolbar"
+                style="@style/text_small"
+                android:layout_marginEnd="?android:attr/actionBarSize"
+                android:text="@string/title_toolbar"
+                android:textSize="25sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/llResetPass"
+            style="@style/main_layout_forms"
+            android:layout_width="660dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newUserToolbar">
+
+            <TextView
+                style="@style/header2"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/txt_newUser"
+                android:layout_marginStart="55dp"
+                android:textSize="29sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginEnd="45dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/groupbox"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/etUserName"
+                        style="@style/text"
+                        android:layout_height="55dp"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:textSize="19sp"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/text_small_negative"
+                    android:layout_marginStart="8dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@string/et_username"
+                    android:textSize="19sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginEnd="45dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/groupbox"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/etEmailUser"
+                        style="@style/text"
+                        android:layout_height="55dp"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:textSize="19sp"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/text_small_negative"
+                    android:layout_marginStart="8dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@string/et_emailUser"
+                    android:textSize="19sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginEnd="45dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/groupbox"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etPasswordUser"
+                        style="@style/text"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="46dp"
+                        android:layout_weight="1"
+                        android:importantForAutofill="no"
+                        android:inputType="textPassword"
+                        android:textSize="19sp"
+                        tools:ignore="LabelFor" />
+
+                    <ImageView
+                        android:id="@+id/ivShowHidePassword"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_eye"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/text_small_negative"
+                    android:layout_marginStart="8dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@string/et_passwordUser"
+                    android:textSize="19sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginEnd="45dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/groupbox"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etConfirmPasswordUser"
+                        style="@style/text"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="46dp"
+                        android:layout_weight="1"
+                        android:importantForAutofill="no"
+                        android:inputType="textPassword"
+                        android:textSize="19sp"
+                        tools:ignore="LabelFor" />
+
+                    <ImageView
+                        android:id="@+id/ivShowHideConfirmPassword"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_eye"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/text_small_negative"
+                    android:layout_marginStart="8dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@string/txtConfirmPassEt"
+                    android:textSize="19sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginEnd="45dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/groupbox"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/spRoleUser"
+                        style="@style/text"
+                        android:layout_height="55dp"
+                        android:importantForAutofill="no"
+                        android:inputType="textPassword"
+                        android:textSize="19sp"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/text_small_negative"
+                    android:layout_marginStart="8dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@string/sp_roleUser"
+                    android:textSize="19sp" />
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="50dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                   android:id="@+id/btnSaveNewUser"
+                    style="@style/button_blue"
+                    android:layout_height="50dp"
+                    android:text="@string/txt_button_save"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnCancelCreateUser"
+                    style="@style/button_blue"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="50dp"
+                    android:text="@string/btnBackRessetPassword"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btnSaveNewUser"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/red_rectangle_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

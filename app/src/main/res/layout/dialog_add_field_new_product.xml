@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/layout_dialogs"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvmsg"
+            style="@style/header2_white"
+            android:textAlignment="center"
+            android:layout_marginTop="30dp"
+            android:text="@string/dialog_add_field_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnHeightField"
+            style="@style/button_white"
+            android:layout_marginTop="8dp"
+            android:text="@string/dialog_add_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvmsg"
+            />
+
+        <Button
+            android:id="@+id/btnSizeShoesUsField"
+            style="@style/button_white"
+            android:layout_marginTop="8dp"
+            android:text="@string/dialog_add_size_us"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnHeightField" />
+
+        <Button
+            android:id="@+id/btnSizeShoesMxField"
+            style="@style/button_white"
+            android:layout_marginTop="8dp"
+            android:text="@string/dialog_add_size_mx"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSizeShoesUsField" />
+
+        <Button
+            android:id="@+id/btnWeightField"
+            style="@style/button_white"
+            android:layout_marginTop="8dp"
+            android:text="@string/dialog_add_weight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSizeShoesMxField" />
+
+        <Button
+            android:id="@+id/btnWidthField"
+            style="@style/button_white"
+            android:layout_marginTop="8dp"
+            android:text="@string/dialog_add_width"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnWeightField" />
+
+
+        <Button
+            android:id="@+id/btnOfferField"
+            style="@style/button_white"
+            android:layout_marginTop="8dp"
+            android:text="@string/dialog_add_offer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnWidthField"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="38dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

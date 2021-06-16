@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.newProduct.NewProductActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/newProductToolbar"
+            style="@style/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_arrow_back_blue">
+
+            <TextView
+                android:id="@+id/tvTitleToolbar"
+                style="@style/text_small"
+                android:layout_marginEnd="?android:attr/actionBarSize"
+                android:text="@string/title_toolbar" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:id="@+id/svNewProduct"
+            style="@style/main_layout_forms"
+            android:padding="0dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    style="@style/header2"
+                    android:text="@string/txt_newProduct" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_small_negative"
+                        android:layout_marginStart="0dp"
+                        android:text="@string/txt_tvLoadImage" />
+
+                    <ImageView
+                        style="@style/icon_Blue"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_upload"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/btnPickImage"
+                        style="@style/button_blue"
+                        android:layout_width="match_parent"
+                        tools:text="image.jpg" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/groupbox"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etProductName"
+                            style="@style/text"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            tools:ignore="LabelFor" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_small_negative"
+                        android:text="@string/tv_GBProductName" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/groupbox"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spProductCategory"
+                            style="@style/text" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_small_negative"
+                        android:text="@string/tv_GBProductCategory" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/groupbox"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etProductModel"
+                            style="@style/text"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            tools:ignore="LabelFor" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_small_negative"
+                        android:text="@string/tv_GBProductModel" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/groupbox"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etProductBrand"
+                            style="@style/text"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            tools:ignore="LabelFor" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_small_negative"
+                        android:text="@string/tv_GBProductBrand" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/groupbox"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etProductCost"
+                            style="@style/text"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal"
+                            tools:ignore="LabelFor" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_small_negative"
+                        android:text="@string/tv_GBProductCost" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/groupbox"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etProductPrice"
+                            style="@style/text"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal"
+                            tools:ignore="LabelFor" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_small_negative"
+                        android:text="@string/tv_GBProductPrice" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/groupbox"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spProductColor"
+                            style="@style/text" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_small_negative"
+                        android:text="@string/tv_GBProductColor" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/groupbox"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spProductMaterial"
+                            style="@style/text" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_small_negative"
+                        android:text="@string/tv_GBProductMaterial" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/groupbox"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etProductDescription"
+                            style="@style/text"
+                            android:layout_height="120dp"
+                            android:importantForAutofill="no"
+                            android:inputType="textMultiLine"
+                            android:padding="15dp"
+                            tools:ignore="LabelFor" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_small_negative"
+                        android:text="@string/tv_GBProductDescription" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/groupbox"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etProductStock"
+                            style="@style/text"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            tools:ignore="LabelFor" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_small_negative"
+                        android:text="@string/tv_GBProductStock" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/groupbox"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etProductReorder"
+                            style="@style/text"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            tools:ignore="LabelFor" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_small_negative"
+                        android:text="@string/tv_GBProductReorder" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/addFieldProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        style="@style/icon_Blue"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:src="@drawable/ic_plus"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        style="@style/text_small_negative"
+                        android:layout_marginStart="0dp"
+                        android:text="@string/txt_add_Field" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSaveNewProduct"
+                    style="@style/button_blue"
+                    android:layout_gravity="center"
+                    android:text="@string/txt_button_save" />
+            </LinearLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tvDecoration"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/red_rectangle_bottom" />
+    </LinearLayout>
+</layout>
