@@ -8,8 +8,7 @@
         android:id="@+id/clContainerLogin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background2x"
-        >
+        android:background="@drawable/background2x">
 
 
         <TextView
@@ -36,11 +35,10 @@
         <EditText
             android:id="@+id/etUser"
             style="@style/text"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/et_corner_round"
             android:elevation="10dp"
-            android:ems="11"
             android:hint="@string/hint_email"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
@@ -64,11 +62,10 @@
         <EditText
             android:id="@+id/etPassword"
             style="@style/text"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/et_corner_round"
             android:elevation="10dp"
-            android:ems="11"
             android:hint="@string/hint_password"
             android:importantForAutofill="no"
             android:inputType="textPassword"

@@ -7,7 +7,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/layout_dialogs"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,9 +16,9 @@
         <TextView
             android:id="@+id/tvTitleAddCategory"
             style="@style/header2_white"
-            android:textAlignment="center"
             android:layout_marginTop="20dp"
-            android:text="@string/tite_add_category"
+            android:text="@string/title_add_category"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -27,11 +27,14 @@
             android:id="@+id/etNameNewCategory"
             style="@style/text"
             android:layout_width="wrap_content"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="60dp"
+            android:layout_marginEnd="30dp"
+            android:width="230dp"
             android:background="@drawable/et_corner_round"
-            android:ems="10"
             android:hint="@string/hint_etCategory"
             android:importantForAutofill="no"
+            android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvTitleAddCategory" />
@@ -49,7 +52,7 @@
             android:id="@+id/btnCancelAddCategory"
             style="@style/button_blue"
             android:layout_marginTop="30dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="20dp"
             android:text="@string/txtBtnCancelLogout"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

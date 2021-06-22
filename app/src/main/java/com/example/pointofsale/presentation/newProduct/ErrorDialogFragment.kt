@@ -9,13 +9,13 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.DialogFragment
 import com.example.pointofsale.R
 
-class AddFieldDialog : DialogFragment() {
+class ErrorDialogFragment : DialogFragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.dialog_add_field_new_product, container, false)
+        val view = inflater.inflate(R.layout.dialog_error_add_product, container, false)
         dialog?.window?.setBackgroundDrawable(
             ResourcesCompat.getDrawable(
                 resources,
@@ -23,6 +23,9 @@ class AddFieldDialog : DialogFragment() {
                 null
             )
         )
+        view.findViewById<Button>(R.id.btnConfirm).setOnClickListener {
+            dismiss()
+        }
         return view
     }
 }

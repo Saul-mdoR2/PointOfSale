@@ -25,7 +25,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
-                tools:text="Women" />
+                android:text="@string/title_fragment_women" />
 
             <ImageView
                 android:id="@+id/ivEditCategory"
@@ -33,13 +33,15 @@
                 android:layout_height="25dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:src="@drawable/ic_edit" />
+                android:src="@drawable/ic_edit"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/ivDeleteCategory"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/ic_delete" />
+                android:src="@drawable/ic_delete"
+                tools:ignore="ContentDescription" />
         </LinearLayout>
 
         <TextView
@@ -47,8 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="10dp"
-            tools:text="7 products"
-            />
+            android:text="@string/total_products_women" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"

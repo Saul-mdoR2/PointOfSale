@@ -73,6 +73,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/layoutGroupboxName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -90,6 +91,7 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/tvTitleNameProduct"
                         style="@style/text_small_negative"
                         android:text="@string/tv_GBProductName" />
                 </RelativeLayout>
@@ -127,6 +129,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/layoutGroupboxModel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -144,6 +147,7 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/tvTitleModel"
                         style="@style/text_small_negative"
                         android:text="@string/tv_GBProductModel" />
                 </RelativeLayout>
@@ -155,6 +159,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/layoutGroupboxBrand"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -172,6 +177,7 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/tvTitleBrand"
                         style="@style/text_small_negative"
                         android:text="@string/tv_GBProductBrand" />
                 </RelativeLayout>
@@ -183,6 +189,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/layoutGroupboxCost"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -200,6 +207,7 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/tvTitleCost"
                         style="@style/text_small_negative"
                         android:text="@string/tv_GBProductCost" />
 
@@ -212,6 +220,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/layoutGroupboxPrice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -229,6 +238,7 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/tvTitlePrice"
                         style="@style/text_small_negative"
                         android:text="@string/tv_GBProductPrice" />
 
@@ -291,6 +301,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/layoutGroupboxDescription"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -310,6 +321,7 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/tvTitleDescription"
                         style="@style/text_small_negative"
                         android:text="@string/tv_GBProductDescription" />
                 </RelativeLayout>
@@ -321,6 +333,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/layoutGroupboxStock"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -338,6 +351,7 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/tvTitleStock"
                         style="@style/text_small_negative"
                         android:text="@string/tv_GBProductStock" />
                 </RelativeLayout>
@@ -349,6 +363,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/layoutGroupboxReorder"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -366,6 +381,7 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/tvTitleReorder"
                         style="@style/text_small_negative"
                         android:text="@string/tv_GBProductReorder" />
                 </RelativeLayout>

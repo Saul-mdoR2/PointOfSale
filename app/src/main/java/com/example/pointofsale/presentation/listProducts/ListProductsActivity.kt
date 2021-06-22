@@ -43,22 +43,22 @@ class ListProductsActivity : AppCompatActivity(), NavigationView.OnNavigationIte
         }
     }
 
-    private fun initPopUpMenu(){
+    private fun initPopUpMenu() {
         val wrapper = ContextThemeWrapper(this, R.style.BasePopupMenu)
-        val popupMenu = PopupMenu(wrapper,layout.ivFilter)
+        val popupMenu = PopupMenu(wrapper, layout.ivFilter)
         popupMenu.menuInflater.inflate(R.menu.menu_filter_product_list, popupMenu.menu)
-        popupMenu.setOnMenuItemClickListener {item->
-            when(item.itemId){
-                R.id.itemAll->{
-                    Toast.makeText(this, "All",Toast.LENGTH_SHORT).show()
+        popupMenu.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.itemAll -> {
+                    Toast.makeText(this, "All", Toast.LENGTH_SHORT).show()
                     true
                 }
-                R.id.itemSold->{
-                    Toast.makeText(this, "Sold",Toast.LENGTH_SHORT).show()
+                R.id.itemSold -> {
+                    Toast.makeText(this, "Sold", Toast.LENGTH_SHORT).show()
                     true
                 }
-                else->{
-                    Toast.makeText(this, "Available",Toast.LENGTH_SHORT).show()
+                else -> {
+                    Toast.makeText(this, "Available", Toast.LENGTH_SHORT).show()
                     true
                 }
             }
@@ -94,7 +94,7 @@ class ListProductsActivity : AppCompatActivity(), NavigationView.OnNavigationIte
 
         val navigationView: NavigationView = findViewById(R.id.navigation_view)
         navigationView.setNavigationItemSelectedListener(this)
-        setSupportActionBar(layout.listProductsToolbar)
+        // setSupportActionBar(layout.listProductsToolbar)
     }
 
     override fun onBackPressed() {

@@ -6,8 +6,8 @@
 
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawer_layout"
-        style="@style/drawerLayout">
-        <!--tools:openDrawer="start" -->
+        style="@style/drawerLayout"
+        tools:openDrawer="start">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
